@@ -1,12 +1,12 @@
 # hunterhodnett.ai
 
-> Hunter Hodnett is a software engineer. This is his personal website featuring his bio, blog posts, and podcast appearances.
+> Hunter Hodnett is a software engineer. This is his personal website featuring his bio, blog posts, and media appearances.
 
 ## Site Contents
 
 - [Homepage](https://hunterhodnett.ai/): Hero bio, skills, and featured content
 - [Blog](https://hunterhodnett.ai/blog/): Technical blog posts and articles
-- [Podcasts](https://hunterhodnett.ai/podcasts/): Podcast appearances and interviews
+- [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, and interviews
 
 ## About Hunter
 
