@@ -364,6 +364,10 @@ section > h1 + p {
   font-size: 0.95rem;
 }
 
+.card p.meta:last-child {
+  font-size: 0.68rem;
+}
+
 /* "View all" links */
 section > p:last-child {
   margin-top: var(--space-lg);
