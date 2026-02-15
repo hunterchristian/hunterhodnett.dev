@@ -274,6 +274,21 @@ main {
   margin-bottom: 0;
 }
 
+/* ===== Article Lists ===== */
+article ul,
+article ol {
+  padding-left: 1.5em;
+  margin-bottom: var(--space-md);
+}
+
+article li {
+  margin-bottom: var(--space-xs);
+}
+
+article li::marker {
+  color: var(--color-accent);
+}
+
 /* ===== Sections ===== */
 section {
   margin-bottom: var(--space-2xl);

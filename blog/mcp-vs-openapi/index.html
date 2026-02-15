@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP vs OpenAPI: What Am I Missing? &mdash; Hunter Hodnett</title>
+  <meta name="description" content="A skeptical CTO asks why MCP is supposedly better than OpenAPI for AI tool invocation. After deep research and building API tooling for Chipp.ai, the answer is still fuzzy.">
+  <meta name="author" content="Hunter Hodnett">
+  <link rel="canonical" href="https://hunterhodnett.ai/blog/mcp-vs-openapi/">
+  <meta property="og:title" content="MCP vs OpenAPI: What Am I Missing? &mdash; Hunter Hodnett">
+  <meta property="og:description" content="A skeptical CTO asks why MCP is supposedly better than OpenAPI for AI tool invocation. After deep research and building API tooling for Chipp.ai, the answer is still fuzzy.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hunterhodnett.ai/blog/mcp-vs-openapi/">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "MCP vs OpenAPI: What Am I Missing?",
+        "datePublished": "2025-06-15",
+        "author": { "@type": "Person", "name": "Hunter Hodnett", "url": "https://hunterhodnett.ai" },
+        "description": "A skeptical CTO asks why MCP is supposedly better than OpenAPI for AI tool invocation. After deep research and building API tooling for Chipp.ai, the answer is still fuzzy.",
+        "url": "https://hunterhodnett.ai/blog/mcp-vs-openapi/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hunterhodnett.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hunterhodnett.ai/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "MCP vs OpenAPI: What Am I Missing?", "item": "https://hunterhodnett.ai/blog/mcp-vs-openapi/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="/" class="site-name">Hunter Hodnett</a>
+      <ul class="nav-links">
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="/media/">Media</a></li>
+        <li><a href="/intros/">Intros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>MCP vs OpenAPI: What Am I Missing?</h1>
+      <p class="meta"><time datetime="2025-06-15">June 15, 2025</time> · <a href="https://www.linkedin.com/posts/hunterhodnett_can-anyone-explain-why-mcp-is-better-than-activity-7331486865675460608-X_z2">Originally posted on LinkedIn</a></p>
+
+      <p>Can anyone explain why MCP is better than just using an OpenAPI schema?</p>
+
+      <p>I&rsquo;ve been banging my head against this question for a while now. I&rsquo;ve run several deep research agents on it. I&rsquo;ve read the docs. I&rsquo;ve read the think pieces. And I keep getting the same answer dressed up in different buzzwords: &ldquo;MCP is the USB-C of AI.&rdquo; If I wasn&rsquo;t already bald, I&rsquo;d be ripping my hair out.</p>
+
+      <p>Here&rsquo;s the thing. There are <em>tons</em> of preexisting APIs out in the wild. Mature, battle-tested, well-documented APIs with OpenAPI schemas that already describe exactly what they do, what parameters they accept, and what they return. That&rsquo;s&hellip; tool invocation. That&rsquo;s literally the thing MCP claims to solve. So what exactly is the new hotness adding?</p>
+
+      <p>At <a href="https://chipp.ai">Chipp</a>, I&rsquo;ve already built something that makes it easy to add existing suites of APIs as tools for AI agents to invoke. You point it at an API, it reads the schema, and the AI can call those endpoints as tools. We&rsquo;re also letting Chipp chats invoke <em>other</em> Chipp chats as tools, which handles the prompt template use case. None of this required a new protocol. It required reading a spec that already existed.</p>
+
+      <p>The MCP pitch, as far as I can tell, boils down to: &ldquo;What if there was a standardized way for AI models to discover and call tools?&rdquo; Great. OpenAPI is a standardized way to describe callable tools. It has versioning. It has auth schemes. It has request/response schemas. It has a massive ecosystem of tooling. It&rsquo;s been around since the Swagger days. What am I missing?</p>
+
+      <p>When I push on this with people, I usually get one of a few responses. The first is discovery &mdash; MCP lets models &ldquo;discover&rdquo; available tools dynamically. Okay, but you can serve an OpenAPI spec from a well-known URL too. The second is that MCP is &ldquo;model-native&rdquo; &mdash; designed specifically for how LLMs think about tool use. But in practice, you&rsquo;re still just describing a function signature with parameters and return types. Whether you call it a &ldquo;tool&rdquo; or an &ldquo;endpoint,&rdquo; the LLM doesn&rsquo;t care. It&rsquo;s reading a description and deciding whether to call it.</p>
+
+      <p>The third response is the one that actually gives me pause: MCP supports bidirectional communication. The server can push context to the model, not just respond to requests. That&rsquo;s genuinely different from a REST API. Streaming state updates, real-time context injection, the model being able to subscribe to changes &mdash; that&rsquo;s something OpenAPI wasn&rsquo;t designed for. But is that what most people are using MCP for? From what I can tell, the vast majority of MCP servers are just wrapping existing REST APIs with an MCP-shaped interface. It&rsquo;s an adapter pattern on top of something that already worked.</p>
+
+      <p>There&rsquo;s also the local tooling angle. MCP shines when you&rsquo;re connecting a model to your local filesystem, your IDE, your dev environment. Things that don&rsquo;t have HTTP APIs. If you&rsquo;re vibe coding your own vertical agent and want Claude to read your files and run your tests, MCP makes that easy. I get that. But that&rsquo;s a developer ergonomics play, not a protocol revolution.</p>
+
+      <p>What bugs me is the hype gap. The way people talk about MCP, you&rsquo;d think it&rsquo;s a fundamental breakthrough in how AI interacts with the world. But when you actually look at what it does, it&rsquo;s&hellip; a JSON-RPC protocol for tool calling. That&rsquo;s fine. JSON-RPC is fine. But &ldquo;fine&rdquo; doesn&rsquo;t usually warrant the kind of breathless coverage this thing is getting.</p>
+
+      <p>I think part of what&rsquo;s going on is that MCP arrived at exactly the right moment. Everyone&rsquo;s building agents. Everyone needs tool calling. And here comes Anthropic with an open protocol that has the word &ldquo;Model&rdquo; right in the name. It <em>feels</em> like the right answer even if the existing answer was already sitting right there.</p>
+
+      <p>The ecosystem momentum is real, though. I&rsquo;ll give it that. When every major AI company and half the developer tools market starts supporting something, it doesn&rsquo;t matter if it&rsquo;s technically redundant &mdash; it becomes the standard by sheer gravity. Standards win by adoption, not by technical superiority. VHS beat Betamax. USB-C beat&hellip; well, everything, eventually. Maybe MCP beats OpenAPI-for-tool-calling simply because everyone decided it would.</p>
+
+      <p>So here&rsquo;s my actual take: if you&rsquo;re building local dev tooling or IDE integrations, MCP is a clear win. If you&rsquo;re doing anything with bidirectional, stateful communication between a model and a service, MCP adds real value. But if you&rsquo;re wrapping existing REST APIs so an AI can call them? You might be adding a layer of complexity on top of something OpenAPI already solved.</p>
+
+      <p>I posted this question on LinkedIn and it blew up &mdash; 175 likes, 209 comments, and a healthy mix of people agreeing with me and people telling me I was missing the point. If you&rsquo;re in the latter camp, I&rsquo;m genuinely asking: show me the receipts. Not the metaphors. Not the USB-C analogies. Show me the concrete use case where MCP does something that a well-structured OpenAPI spec plus an LLM with tool-calling support cannot.</p>
+
+      <p>I&rsquo;m still waiting.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Hunter Hodnett</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/hunterchristian">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/hunterhodnett">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

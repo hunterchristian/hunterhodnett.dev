@@ -8,6 +8,17 @@
 - [Homepage (Markdown)](https://hunterhodnett.ai/index.md): Full homepage content in Markdown
 - [Blog](https://hunterhodnett.ai/blog/): Technical blog posts and articles
 - [Blog (Markdown)](https://hunterhodnett.ai/blog/index.md): Blog content in Markdown
+- [Autonomous AI Product Dev Setup](https://hunterhodnett.ai/blog/autonomous-ai-dev-setup/index.md): Technical guide for operating 10 AI dev machines autonomously
+- [The AI Fog-of-War on Software Engineering Jobs](https://hunterhodnett.ai/blog/ai-fog-of-war-on-engineering-jobs/index.md): Why CS fundamentals matter more than ever in the AI era
+- [AI Is the Next Abstraction Layer](https://hunterhodnett.ai/blog/ai-is-the-next-abstraction-layer/index.md): Every major abstraction replaced something lower-level, but the foundation never stops being worth knowing
+- [MCP vs OpenAPI: What Am I Missing?](https://hunterhodnett.ai/blog/mcp-vs-openapi/index.md): Questioning whether MCP adds value over existing OpenAPI schemas
+- [What If Other Engineers Used Software Methodologies?](https://hunterhodnett.ai/blog/software-engineering-methodologies/index.md): Satirical look at software dev methodologies applied to other engineering fields
+- [AI Is Coming for Software Jobs](https://hunterhodnett.ai/blog/ai-is-coming-for-software-jobs/index.md): Capital leverage like the world has never seen
+- [The Collapse of Builder.ai](https://hunterhodnett.ai/blog/collapse-of-builder-ai/index.md): Analysis of Builder.ai's collapse from $1B unicorn to insolvency
+- [Christianity's Truth vs. the 'Opiate of the Masses'](https://hunterhodnett.ai/blog/christianity-truth-defense/index.md): Defense of Christianity's historical foundations
+- [Don't Outsource Your MVP](https://hunterhodnett.ai/blog/dont-outsource-your-mvp/index.md): Why SaaS founders should never outsource their MVP
+- [Devin Tried to Drop Our Database](https://hunterhodnett.ai/blog/devin-tried-to-drop-our-database/index.md): Cautionary tale about autonomous AI dev tools
+- [I Showed Up to a Reddit Offsite in a Full Pirate Costume](https://hunterhodnett.ai/blog/reddit-ipo-pirate-story/index.md): The pirate-themed offsite where nobody dressed up except me
 - [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, video series, and press coverage
 - [Media (Markdown)](https://hunterhodnett.ai/media/index.md): Media content in Markdown
 - [Ask Me for an Intro](https://hunterhodnett.ai/intros/): Searchable list of Hunter's 1,800+ LinkedIn connections — ask for an introduction

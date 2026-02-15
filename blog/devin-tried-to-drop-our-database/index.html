@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin Tried to Drop Our Database — Hunter Hodnett</title>
+  <meta name="description" content="We asked Devin, the autonomous AI software engineer, to fix placeholder text on an input. It tried to drop our database tables instead. A short cautionary tale.">
+  <meta name="author" content="Hunter Hodnett">
+  <link rel="canonical" href="https://hunterhodnett.ai/blog/devin-tried-to-drop-our-database/">
+  <meta property="og:title" content="Devin Tried to Drop Our Database — Hunter Hodnett">
+  <meta property="og:description" content="We asked Devin, the autonomous AI software engineer, to fix placeholder text on an input. It tried to drop our database tables instead. A short cautionary tale.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hunterhodnett.ai/blog/devin-tried-to-drop-our-database/">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Devin Tried to Drop Our Database",
+        "datePublished": "2025-02-15",
+        "author": { "@type": "Person", "name": "Hunter Hodnett", "url": "https://hunterhodnett.ai" },
+        "description": "We asked Devin, the autonomous AI software engineer, to fix placeholder text on an input. It tried to drop our database tables instead. A short cautionary tale.",
+        "url": "https://hunterhodnett.ai/blog/devin-tried-to-drop-our-database/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hunterhodnett.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hunterhodnett.ai/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Devin Tried to Drop Our Database", "item": "https://hunterhodnett.ai/blog/devin-tried-to-drop-our-database/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="/" class="site-name">Hunter Hodnett</a>
+      <ul class="nav-links">
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="/media/">Media</a></li>
+        <li><a href="/intros/">Intros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Devin Tried to Drop Our Database</h1>
+      <p class="meta"><time datetime="2025-02-15">February 15, 2025</time></p>
+
+      <p>We just tried <a href="https://devin.ai">Devin</a> out. For the uninitiated, Devin is a &ldquo;mostly-autonomous AI software engineer&rdquo; &mdash; the kind of tool that promises to take a ticket, go off into the wilderness, and come back with a pull request. The pitch is compelling. Hand it a task, walk away, come back to working code.</p>
+
+      <p>We handed it an easy one. Fix the placeholder text on an input field. That&rsquo;s it. A one-line change. Maybe two if you&rsquo;re feeling generous.</p>
+
+      <p>Devin proceeded to attempt to drop multiple tables from our database.</p>
+
+      <p>I want to be clear: we did not ask it to touch the database. We did not ask it to run migrations. We did not ask it to do anything even remotely adjacent to the data layer. We asked it to change placeholder text. On an input. In the UI.</p>
+
+      <p>It decided that the best path to fixing &ldquo;Enter your email&hellip;&rdquo; was apparently to nuke the users table.</p>
+
+      <p>Thankfully, it didn&rsquo;t actually succeed &mdash; we caught it in review. But the fact that an autonomous agent decided the correct fix for a frontend string was to destroy production data is&hellip; something.</p>
+
+      <p>The takeaway here isn&rsquo;t that Devin is bad. It&rsquo;s that autonomous AI dev tools are still in the &ldquo;let it cook but watch it like a hawk&rdquo; phase. Maybe one day we&rsquo;ll trust them with the keys. Today is not that day.</p>
+
+      <p>YMMV.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Hunter Hodnett</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/hunterchristian">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/hunterhodnett">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
