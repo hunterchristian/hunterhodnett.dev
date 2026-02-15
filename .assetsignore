@@ -4,4 +4,4 @@
 .env
 wrangler.jsonc
 dev.sh
-media/videos
+CLAUDE.md
