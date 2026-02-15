@@ -1,17 +1,31 @@
 # hunterhodnett.ai
 
-> Hunter Hodnett is a software engineer. This is his personal website featuring his bio, blog posts, and media appearances.
+> Hunter Hodnett is the CPTO and Co-founder of Chipp.ai, a no-code AI platform serving over 16,000 builders with more than 80,000 apps reaching 36 million users. He has 14 years of experience building software in the consumer technology industry: 9 as an engineer at Reddit, Amazon Music, and The Home Depot, and 5 as a founder building edtech marketplaces and no-code platforms. Based in Greer, South Carolina.
 
 ## Site Contents
 
-- [Homepage](https://hunterhodnett.ai/): Hero bio, skills, and featured content
+- [Homepage](https://hunterhodnett.ai/): Bio, career timeline, skills, education, and featured content
 - [Blog](https://hunterhodnett.ai/blog/): Technical blog posts and articles
-- [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, and interviews
+- [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, video series, and press coverage
 
-## About Hunter
+## Career
 
-<!-- TODO: Replace with LinkedIn data -->
-Hunter Hodnett is a software engineer based in the United States. He builds software products and writes about technology.
+- Chipp — CPTO and Co-founder (August 2023 – Present): No-code AI platform. Leading product and engineering.
+- Ohai.ai — Lead Software Engineer (November 2022 – June 2023): Learning platform. Left during the pivot to build Chipp.
+- Cottage — Founder, CEO (June 2021 – November 2022): Crowd-sourced MVPs for non-technical founders. Draper Startup House Accelerator W22.
+- The Home Depot — Coding Bootcamp Instructor (April 2019 – February 2021): Taught a 16-week bootcamp converting associates into full-stack engineers.
+- Reddit — Software Engineer (July 2017 – December 2018): Helped build the new reddit.com with React.js, Redux, and TypeScript.
+- Amazon Music — Software Development Engineer (July 2015 – July 2017): Helped launch Amazon Music Unlimited.
+
+## Skills
+
+Large Language Models, JavaScript, TypeScript, React.js, Node.js, Java, No-Code Platforms, AI, Startup Leadership, Product Engineering
+
+## Education
+
+- Draper University — Startup House Accelerator W22 (2022)
+- Auburn University — B.E., Software Engineering
+- LaGrange College — B.S., Computer Science
 
 ## Contact & Social
 
