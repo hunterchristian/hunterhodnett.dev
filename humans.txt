@@ -1,0 +1,11 @@
+/* TEAM */
+Name: Hunter Hodnett
+Role: Developer & Author
+Site: https://hunterhodnett.dev
+GitHub: https://github.com/hunterchristian
+LinkedIn: https://linkedin.com/in/hunterhodnett
+
+/* SITE */
+Last update: 2026-02-15
+Standards: HTML5, CSS3
+Software: Hand-coded with care
