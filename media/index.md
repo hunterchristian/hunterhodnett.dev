@@ -52,6 +52,18 @@ Video: https://pub-b8df2807b9d74c259ff0f7ee5d4eb1a3.r2.dev/media/videos/ai-for-d
 
 ---
 
+## Finding Truth When Building a Startup
+
+*July 16, 2025 · Founderville*
+
+Tags: Podcast, Startups, Chipp
+
+Hunter discusses his journey as co-founder of Chipp.ai, the importance of founder partnerships, and finding truth when making decisions.
+
+Video: https://pub-b8df2807b9d74c259ff0f7ee5d4eb1a3.r2.dev/media/videos/finding-truth-building-startup-founderville.mp4
+
+---
+
 ## Addicted to Startups, AI Chatbots
 
 *January 9, 2024 · Carolina Code Cast · Ep. 13*
