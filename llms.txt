@@ -10,6 +10,8 @@
 - [Blog (Markdown)](https://hunterhodnett.ai/blog/index.md): Blog content in Markdown
 - [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, video series, and press coverage
 - [Media (Markdown)](https://hunterhodnett.ai/media/index.md): Media content in Markdown
+- [Ask Me for an Intro](https://hunterhodnett.ai/intros/): Searchable list of Hunter's 1,800+ LinkedIn connections — ask for an introduction
+- [Intros (Markdown)](https://hunterhodnett.ai/intros/index.md): Full connection list in Markdown
 
 ## Expertise
 

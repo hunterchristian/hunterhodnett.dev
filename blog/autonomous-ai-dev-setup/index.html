@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous AI Product Dev Setup — Hunter Hodnett</title>
+  <meta name="description" content="A technical guide for operating 10 AI development machines autonomously with a KVM over IP console and Slack prompt relay.">
+  <meta name="author" content="Hunter Hodnett">
+  <link rel="canonical" href="https://hunterhodnett.ai/blog/autonomous-ai-dev-setup/">
+  <meta property="og:title" content="Autonomous AI Product Dev Setup — Hunter Hodnett">
+  <meta property="og:description" content="A technical guide for operating 10 AI development machines autonomously with a KVM over IP console and Slack prompt relay.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hunterhodnett.ai/blog/autonomous-ai-dev-setup/">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Autonomous AI Product Dev Setup",
+        "datePublished": "2025-12-08",
+        "author": { "@type": "Person", "name": "Hunter Hodnett", "url": "https://hunterhodnett.ai" },
+        "description": "A technical guide for operating 10 AI development machines autonomously with a KVM over IP console and Slack prompt relay.",
+        "url": "https://hunterhodnett.ai/blog/autonomous-ai-dev-setup/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hunterhodnett.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hunterhodnett.ai/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Autonomous AI Dev Setup", "item": "https://hunterhodnett.ai/blog/autonomous-ai-dev-setup/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="/" class="site-name">Hunter Hodnett</a>
+      <ul class="nav-links">
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="/media/">Media</a></li>
+        <li><a href="/intros/">Intros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Autonomous AI Product Dev Setup</h1>
+      <p class="meta"><time datetime="2025-12-08">December 8, 2025</time></p>
+
+      <h2>Multi-Host Console + Slack Prompt Relay</h2>
+
+      <h3>Overview</h3>
+      <p>Operate 10 Beelink GTi15 Ultra machines on autonomous tasks while controlling them from a single monitor, keyboard, and mouse. Achieve instant switching with an enterprise KVM over IP and receive actionable Slack notifications whenever any terminal session blocks for input — even for black-box programs whose output you don't control.</p>
+
+      <h3>Goals</h3>
+      <ul>
+        <li>Single physical console for all hosts; near-instant switching.</li>
+        <li>Slack alerts the moment any process awaits input; act via buttons or typed responses.</li>
+        <li>Minimal intrusion: no changes to target programs (black-box support).</li>
+        <li>Secure, reliable, and auditable.</li>
+      </ul>
+
+      <h2>Hardware Topology</h2>
+      <ul>
+        <li>16-port KVM over IP</li>
+        <li>Cabling</li>
+        <li>Networking</li>
+        <li>Power &amp; stability</li>
+        <li>Beelink GTi15 Ultra I/O alignment</li>
+      </ul>
+
+      <h2>Software Architecture</h2>
+
+      <h3>Components</h3>
+      <ol>
+        <li>Slack App</li>
+        <li>Command Server (Node.js)</li>
+        <li>Host Agent (Python, per machine)</li>
+        <li>Optional Admin box</li>
+      </ol>
+
+      <h3>Data Flow</h3>
+      <ul>
+        <li>Process output &rarr; Agent heuristic detection &rarr; Command server &rarr; Slack message (buttons + "Type...")</li>
+        <li>Your choice in Slack &rarr; Command server &rarr; Agent reply endpoint &rarr; Agent writes choice to process stdin</li>
+      </ul>
+
+      <h3>Prompt Detection Heuristics (no program changes needed)</h3>
+      <ul>
+        <li>Lines ending with "?" or typical prompt markers like "(y/n)", "[Y/n]", ":", "&gt;".</li>
+        <li>Keywords: "enter", "input", "password", "continue", "press", "choice", "select", "confirm", "approve", "retry", "abort".</li>
+        <li>Idle detection: no output for N seconds with a prompt-like tail.</li>
+        <li>BEL (terminal bell) detection for urgent attention.</li>
+      </ul>
+
+      <h2>Security &amp; Reliability</h2>
+      <ul>
+        <li>TLS on the command server; expose only HTTPS.</li>
+        <li>HMAC shared secret between agents and server for event integrity.</li>
+        <li>Slack signing secret verification for interactivity requests.</li>
+        <li>Firewall host agent reply ports; limit to server's IP(s).</li>
+        <li>Prompt deduplication and cooldown to avoid noise.</li>
+        <li>Audit trail: Slack messages updated with final decision; server logs record events.</li>
+        <li>Resilience.</li>
+      </ul>
+
+      <h2>Deployment Steps</h2>
+
+      <h3>1) Hardware Setup</h3>
+      <ul>
+        <li>Rack and power the KVM over IP and network switch; connect UPS.</li>
+        <li>Connect each GTi15 Ultra to a KVM port via HDMI/DP + USB.</li>
+        <li>Assign KVM ports 1&ndash;10 to hosts; label cables and ports.</li>
+        <li>Configure KVM.</li>
+      </ul>
+
+      <h3>2) Slack App</h3>
+      <ul>
+        <li>Create app in Slack &rarr; Enable Interactivity; set the Interactivity URL to your command server endpoint.</li>
+        <li>Install to workspace; capture tokens.</li>
+      </ul>
+
+      <h3>3) Command Server (Node.js)</h3>
+      <ul>
+        <li>Environment variables.</li>
+        <li>Install and run.</li>
+      </ul>
+
+      <h3>4) Host Agent (Python)</h3>
+      <ul>
+        <li>Environment variables per host.</li>
+        <li>Install dependencies.</li>
+        <li>Run workloads via the agent wrapper.</li>
+      </ul>
+
+      <h2>Operations</h2>
+      <ul>
+        <li>Run long-lived jobs through the agent wrapper so prompts are caught.</li>
+        <li>Use KVM hotkeys (F1&ndash;F10) for instant local switching; use KVM web client links in Slack to jump remotely.</li>
+        <li>In Slack: respond to prompts.</li>
+        <li>Logging and audits.</li>
+      </ul>
+
+      <h2>Tuning &amp; Edge Cases</h2>
+      <ul>
+        <li>Adjust PROMPT_IDLE_SECS for more/less sensitivity.</li>
+        <li>Expand PROMPT_KEYWORDS to match your common workflows.</li>
+        <li>Password prompts: prefer manual console via KVM or secure typed modal with limited retention.</li>
+        <li>GUI dialogs: heuristics won't trigger; use KVM to click through.</li>
+        <li>High-refresh video modes (HDR/VRR) may not be preserved by all KVMs; verify model capabilities if needed.</li>
+      </ul>
+
+      <h2>Shopping List</h2>
+      <ul>
+        <li>Enterprise 16-port IP-KVM (HDMI or DP, 4K60, USB HID, EDID lock).</li>
+        <li>10&times; HDMI 2.0 or DP 1.4 cables (identical make/model).</li>
+        <li>10&times; USB A-to-B cables for KVM HID.</li>
+        <li>Managed Ethernet switch (24&ndash;48 ports; optional 10G uplink).</li>
+        <li>10&times; Cat6a/Cat7 patch cables.</li>
+        <li>UPS sized for KVM + switch.</li>
+      </ul>
+
+      <h2>Next Steps</h2>
+      <ul>
+        <li>Confirm video standard (HDMI vs DP) and target resolution; procure the KVM model accordingly.</li>
+        <li>Deploy the command server (TLS) and Slack app; validate interactive flows.</li>
+        <li>Install the agent on each GTi15 Ultra; map KVM ports; test with a synthetic prompt.</li>
+        <li>Iterate heuristics and cooldowns; add any custom keywords that match your workflows.</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Hunter Hodnett</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/hunterchristian">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/hunterhodnett">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
