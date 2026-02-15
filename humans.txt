@@ -1,7 +1,7 @@
 /* TEAM */
 Name: Hunter Hodnett
 Role: Developer & Author
-Site: https://hunterhodnett.dev
+Site: https://hunterhodnett.ai
 GitHub: https://github.com/hunterchristian
 LinkedIn: https://linkedin.com/in/hunterhodnett
 

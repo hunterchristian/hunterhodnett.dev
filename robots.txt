@@ -17,4 +17,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://hunterhodnett.dev/sitemap.xml
+Sitemap: https://hunterhodnett.ai/sitemap.xml

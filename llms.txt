@@ -1,12 +1,12 @@
-# hunterhodnett.dev
+# hunterhodnett.ai
 
 > Hunter Hodnett is a software engineer. This is his personal website featuring his bio, blog posts, and podcast appearances.
 
 ## Site Contents
 
-- [Homepage](https://hunterhodnett.dev/): Hero bio, skills, and featured content
-- [Blog](https://hunterhodnett.dev/blog/): Technical blog posts and articles
-- [Podcasts](https://hunterhodnett.dev/podcasts/): Podcast appearances and interviews
+- [Homepage](https://hunterhodnett.ai/): Hero bio, skills, and featured content
+- [Blog](https://hunterhodnett.ai/blog/): Technical blog posts and articles
+- [Podcasts](https://hunterhodnett.ai/podcasts/): Podcast appearances and interviews
 
 ## About Hunter
 
@@ -15,6 +15,6 @@ Hunter Hodnett is a software engineer based in the United States. He builds soft
 
 ## Contact & Social
 
-- Website: https://hunterhodnett.dev
+- Website: https://hunterhodnett.ai
 - GitHub: https://github.com/hunterchristian
 - LinkedIn: https://linkedin.com/in/hunterhodnett

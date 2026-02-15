@@ -1,4 +1,4 @@
-# hunterhodnett.dev
+# hunterhodnett.ai
 
 Personal website for Hunter Hodnett — a static, AEO-optimized portfolio site.
 
