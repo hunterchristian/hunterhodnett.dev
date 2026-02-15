@@ -47,7 +47,9 @@ Before Chipp, Hunter founded **Cottage**, a marketplace that crowd-sourced MVPs 
 
 ## Recent blog posts
 
-Blog posts coming soon. Check back for new articles on software engineering and technology.
+- **[Autonomous AI Product Dev Setup](/blog/autonomous-ai-dev-setup/)** — December 8, 2025. A technical guide for operating 10 AI development machines autonomously with a KVM over IP console and Slack prompt relay.
+- **[The AI Fog-of-War on Software Engineering Jobs](/blog/ai-fog-of-war-on-engineering-jobs/)** — November 15, 2025. CS fundamentals matter more than ever. AI automates grunt work, but you still need to know when the machine is wrong.
+- **[AI Is the Next Abstraction Layer](/blog/ai-is-the-next-abstraction-layer/)** — June 15, 2025. Every major abstraction in computing replaced something lower-level, but we still teach the fundamentals. AI is no different.
 
 [View all blog posts](/blog/)
 
