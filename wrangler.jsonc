@@ -1,7 +1,14 @@
 {
   "name": "hunterhodnett-dev",
+  "account_id": "88af7e46e0143c6510c9d7b3d09161d9",
   "compatibility_date": "2026-02-15",
   "assets": {
     "directory": "./"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "hunterhodnett.ai",
+      "custom_domain": true
+    }
+  ]
 }

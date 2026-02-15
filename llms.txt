@@ -4,9 +4,22 @@
 
 ## Site Contents
 
-- [Homepage](https://hunterhodnett.ai/): Bio, career timeline, skills, education, and featured content
+- [Homepage](https://hunterhodnett.ai/): Bio, career timeline, expertise, education, and featured content
+- [Homepage (Markdown)](https://hunterhodnett.ai/index.md): Full homepage content in Markdown
 - [Blog](https://hunterhodnett.ai/blog/): Technical blog posts and articles
+- [Blog (Markdown)](https://hunterhodnett.ai/blog/index.md): Blog content in Markdown
 - [Media](https://hunterhodnett.ai/media/): Conference talks, podcast appearances, video series, and press coverage
+- [Media (Markdown)](https://hunterhodnett.ai/media/index.md): Media content in Markdown
+
+## Expertise
+
+**Platform & Product:** White-Label SaaS, Multi-Tenant Architecture, No-Code Product Design, Marketplace Design, Usage-Based Billing, Consumer Monetization
+
+**AI & Machine Learning:** LLM Integration, RAG & Knowledge Retrieval, AI Agent Orchestration, Voice Agents, Prompt Engineering, Vector Search
+
+**Infrastructure:** Cloudflare Workers & Edge, Google Cloud & Kubernetes, PostgreSQL & pgvector, Stripe Billing & Connect, CI/CD & GitOps, Observability
+
+**Stack:** TypeScript, Deno, Svelte, Hono, React, Redis
 
 ## Career
 
@@ -16,10 +29,6 @@
 - The Home Depot — Coding Bootcamp Instructor (April 2019 – February 2021): Taught a 16-week bootcamp converting associates into full-stack engineers.
 - Reddit — Software Engineer (July 2017 – December 2018): Helped build the new reddit.com with React.js, Redux, and TypeScript.
 - Amazon Music — Software Development Engineer (July 2015 – July 2017): Helped launch Amazon Music Unlimited.
-
-## Skills
-
-Large Language Models, JavaScript, TypeScript, React.js, Node.js, Java, No-Code Platforms, AI, Startup Leadership, Product Engineering
 
 ## Education
 

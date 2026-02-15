@@ -141,6 +141,12 @@ main {
   gap: var(--space-lg);
 }
 
+.site-header h1 {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .site-header .site-name {
   font-family: var(--font-serif);
   font-size: 1.65rem;
@@ -202,37 +208,70 @@ main {
 .hero {
   margin-bottom: var(--space-2xl);
   text-align: center;
+  padding-top: var(--space-sm);
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0;
-}
-
-.hero h1::after {
-  content: "";
-  display: block;
-  width: 48px;
-  height: 1px;
-  background-color: var(--color-accent);
-  margin: var(--space-lg) auto;
+.hero-deck {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-md);
 }
 
 .hero .subtitle {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--color-text-muted);
-  letter-spacing: 0.03em;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
-.hero > p:last-child {
+.hero .subtitle a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.hero .subtitle a:hover {
+  color: var(--color-accent);
+}
+
+.dateline {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-bio {
   text-align: left;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-bio p {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+}
+
+.hero-bio p:last-child {
+  margin-bottom: 0;
 }
 
 /* ===== Sections ===== */
@@ -373,6 +412,33 @@ section > p:last-child a:hover {
   color: var(--color-tag-text);
 }
 
+/* ===== Expertise ===== */
+.expertise-list {
+  margin: 0;
+}
+
+.expertise-group {
+  margin-bottom: var(--space-xl);
+}
+
+.expertise-group:last-child {
+  margin-bottom: 0;
+}
+
+.expertise-group dt {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.expertise-group dd {
+  margin-left: 0;
+}
+
 /* ===== Skills ===== */
 .skills-list {
   display: flex;
@@ -479,8 +545,8 @@ section > p:last-child a:hover {
     --space-2xl: 3.5rem;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
+  .hero-deck {
+    font-size: 1.2rem;
   }
 
   h1 {
