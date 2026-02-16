@@ -41,7 +41,7 @@ Before Chipp, Hunter founded **Cottage**, a marketplace that crowd-sourced MVPs 
 
 - **Draper Startup House Accelerator W22** — Entrepreneurship (February 2022 – April 2022). Learned how to raise venture capital. Received mentorship from the founders of startups such as Robinhood, Kraken, and Ring.
 - **Auburn University** — B.E., Software Engineering. Dean's List.
-- **LaGrange College** — B.S., Computer Science. Supplemented high school curriculum with college-level computer science classes during junior year.
+- **LaGrange College** — Computer Science (Dual Enrollment). Supplemented high school curriculum with college-level computer science classes during junior year.
 - **McKinney Boyd High School** — AP Computer Science. Started studying computer science in high school through the AP curriculum, covering algorithms, networking basics, and OOP fundamentals in C++ and Java.
 - **McKinney High School** — AP Computer Science. AP Computer Science curriculum covering OOP basics with Java applets.
 
